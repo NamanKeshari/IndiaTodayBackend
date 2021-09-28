@@ -11,6 +11,7 @@ const bannerOfferRoutes = require("./routes/bannerOffer.routes");
 const horoscopeRoutes = require("./routes/horoscope.routes");
 const questionCategoryRoutes = require("./routes/questionCategory.routes");
 const ReportsRoutes = require("./routes/reports.routes");
+const FeedbacksRoutes = require("./routes/feedback.routes");
 app.get("/", (req, res) => {
   res.json({
     message: "hello naman",
@@ -22,6 +23,7 @@ app.use("/bannerOffer", bannerOfferRoutes);
 app.use("/horoscope", horoscopeRoutes);
 app.use("/questionCategory", questionCategoryRoutes);
 app.use("/reports", ReportsRoutes);
+app.use("/feedbacks", FeedbacksRoutes);
 const PORT = process.env.PORT;
 
 mongoose
